@@ -20,5 +20,11 @@ public class Block : MonoBehaviour {
 	void OnCollisionEnter2D (Collision2D col) {
 		actualHits++;
 
+		// destroy the block game object
+		if (actualHits >= maxHits) {
+			Destroy(gameObject);
+		}
+
+
 	}
 }

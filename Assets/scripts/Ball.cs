@@ -27,7 +27,17 @@ public class Ball : MonoBehaviour {
 			}
 
 		}
+	}
 
+	void OnCollisionEnter2D () {
 
+		if (isGameStarted) {
+			accelerate ();
+		}
+	}
+
+	void accelerate() {
+		Vector2 accel = new Vector2 (Random.Range (0f, 2f), Random.Range (0f, 2f));
+		this.GetComponent<Rigidbody2D> ().velocity += accel;
 	}
 }
