@@ -8,7 +8,7 @@ public class Ball : MonoBehaviour {
 
 	Vector3 paddleToBallVector;
 
-	private bool isGameStarted = false;
+	public static bool isGameStarted = false;
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +23,7 @@ public class Ball : MonoBehaviour {
 
 			if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) {
 				isGameStarted = true;
-				this.GetComponent<Rigidbody2D>().velocity = new Vector2 (2f, 14f);
+				this.GetComponent<Rigidbody2D>().velocity = new Vector2 (3f, 14f);
 			}
 
 		}
@@ -37,7 +37,7 @@ public class Ball : MonoBehaviour {
 	}
 
 	void accelerate() {
-		Vector2 accel = new Vector2 (Random.Range (0f, 2f), Random.Range (0f, 2f));
+		Vector2 accel = new Vector2 (Random.Range (0.1f, 0.1f), Random.Range (0.1f, 0.1f));
 		this.GetComponent<Rigidbody2D> ().velocity += accel;
 	}
 }

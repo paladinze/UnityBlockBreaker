@@ -32,14 +32,15 @@ public class Paddle : MonoBehaviour {
 
 	void AutoPlay() {
 		Vector3 paddlePos = new Vector3 (ball.transform.position.x, this.transform.position.y, 0f);
-		paddlePos.x = Mathf.Clamp(paddlePos.x, 0.5f , 15.5f );
+		paddlePos.x = Mathf.Clamp(paddlePos.x, 0f + 0.5f * this.transform.localScale.x , 16f - 0.5f * this.transform.localScale.x );
 		this.transform.position = paddlePos;
 	}
 
 	void ManualPlay() {
-		Vector3 paddlePos = new Vector3 (8f, this.transform.position.y, 0f);
+		float positionX = Ball.isGameStarted ? this.transform.position.x : 8f;
+		Vector3 paddlePos = new Vector3 (positionX, this.transform.position.y, 0f);
 		float mousePosInWorldUnits = (Input.mousePosition.x / Screen.width) * 16;
-		paddlePos.x = Mathf.Clamp(mousePosInWorldUnits - 0.5f, 0.5f , 15.5f );
+		paddlePos.x = Mathf.Clamp(mousePosInWorldUnits - 0.5f * this.transform.localScale.x, 0f + 0.5f * this.transform.localScale.x , 16f - 0.5f * this.transform.localScale.x );
 
 		this.transform.position = paddlePos;
 	}
