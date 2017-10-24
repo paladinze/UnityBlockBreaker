@@ -80,6 +80,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actualHits: 0
   maxHits: 1
+  smokePrefab: {fileID: 1759344981266564, guid: 549969e22a7604be49da56a61b95b0cc,
+    type: 2}
 --- !u!212 &212976498614761752
 SpriteRenderer:
   m_ObjectHideFlags: 1

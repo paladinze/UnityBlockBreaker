@@ -80,6 +80,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actualHits: 0
   maxHits: 2
+  smokePrefab: {fileID: 1759344981266564, guid: 549969e22a7604be49da56a61b95b0cc,
+    type: 2}
 --- !u!212 &212976498614761752
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -115,7 +117,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 30914db449c854496a63d5721bd87fb0, type: 3}
-  m_Color: {r: 0.9044118, g: 0.71545756, b: 0.21945286, a: 1}
+  m_Color: {r: 0.20937829, g: 0.69, b: 0.78676474, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
